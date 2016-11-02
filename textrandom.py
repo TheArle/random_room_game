@@ -2,18 +2,15 @@ import random
 #imports the methods into this namespace, less typing
 from player import *
 
-
 def change_room():
     pass
 
-def r1():
+def r1(player):
     #code for whatever happens in each room 
     pass
 
-def r2():
+def r2(player):
     pass
-
-
 
 ###########################  Setup game here ###########
 
@@ -36,10 +33,13 @@ rooms = dict(zip(keys, roomslist))
 
 ############### ############Start a player ######################
     
-player = Player('Arlin', 'Living Room')
+player = Player('Arlin', 'Some Room')
 print (player.info())
 
 ############################ Game Loop #########################
 
 while True:
+    # go to a random room
+    # run the room's function
+    # player makes a choice 
     pass
