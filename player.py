@@ -20,7 +20,7 @@ class Player:
         print ('*'* 60)
         
     def change_room(self):
-         self.room += 1
+         self.room += 1  # use this if you want to go from room 1 to 2 to 3.  Change for random rooms
          return (self.room)
 
     def take(self, thing):
