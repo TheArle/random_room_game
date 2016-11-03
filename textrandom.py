@@ -2,9 +2,6 @@ import random
 #imports the methods into this namespace, less typing
 from player import *
 
-def change_room():
-    pass
-
 def r1(player):
     #code for whatever happens in each room 
     pass
