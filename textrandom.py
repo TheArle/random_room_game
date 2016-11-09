@@ -3,40 +3,43 @@ import random
 from player import *
 
 def r1(player):
-    #code for whatever happens in each room 
-    pass
-
+    print ('You are sitting in a large dim room')
+    
 def r2(player):
     pass
 
 ###########################  Setup game here ###########
 
-############### Load the rooms #############
+#************************** Load the rooms **************
 room =[]       
 roomslist=[]
- 
 ##############  convert to a list of lists ######################
 for line in open("rooms.csv"):
     line = line.strip('\n')         # lose the newline characters
-    room = line.split(",")          # single room
-    roomslist.append(room)          # all the rooms
- 
+    room = line.split(",")          # single room list
+    roomslist.append(room)          # list ofall the room lists
+# print (roomslist) 
 ###############  make into a dictionary ######################
+#************ this version just uses the list, *****************
+'''     all lines between triple quotes are comments!!
 keys = []
 number_of_rooms = (len(roomslist))
 for i in range(number_of_rooms):
     keys.append(i)
-rooms = dict(zip(keys, roomslist)) 
-
+rooms = dict(zip(keys, roomslist))
+#print (rooms)
+'''
 ############### ############Start a player ######################
-    
-player = Player('Arlin', 'Some Room')
-print (player.info())
+player = Player('Arlin', '1')
+room = player.change_room()     
+#  change_room()  call to local function
 
 ############################ Game Loop #########################
-
 while True:
-    # go to a random room
-    # run the room's function
-    # player makes a choice 
-    pass
+    print (player.info())
+    room = player.change_room()
+    rm_name, rm_describe, rm_item = roomslist[room][0], roomslist[room][1],\
+    roomslist[room][2]
+    print ('{}, You are in {}, {}'.format(player.name, rm_name,rm_describe))  
+    print ('There is a {} here'.format(rm_item))
+    input("pause")
