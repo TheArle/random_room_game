@@ -8,6 +8,9 @@ def r1(player):
 def r2(player):
     pass
 
+def r8(player):
+    print ('Whoah ...')
+
 ###########################  Setup game here ###########
 
 #************************** Load the rooms **************
