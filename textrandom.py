@@ -33,7 +33,7 @@ rooms = dict(zip(keys, roomslist))
 #print (rooms)
 '''
 ############### ############Start a player ######################
-player = Player('Arlin', '1')
+player = Player('Arlin', 1)
 room = player.change_room()     
 #  change_room()  call to local function
 
